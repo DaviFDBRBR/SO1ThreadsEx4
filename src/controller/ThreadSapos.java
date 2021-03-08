@@ -23,10 +23,14 @@ public class ThreadSapos extends Thread{
 		int salto = 0;
 		int dist = 0;
 
+		salto = (int) (Math.random() * (saltoMax+1));
+		dist += salto;
+		
 		while (dist < distMax) {
+			System.out.printf("n°%d saltou %d  m | Percorreu %d  m%n", sapo, salto, dist);
 			salto = (int) (Math.random() * (saltoMax+1));
 			dist += salto;
-			System.out.printf("n°%d saltou %d  m | Percorreu %d  m%n", sapo, salto, dist);
+			
 		}
 		
 		pos++;
